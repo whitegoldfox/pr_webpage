@@ -45,6 +45,15 @@
 	
 
 </head>
+  <!-- iframe用script ここから -->
+  <script type="text/javascript">
+    var submitted = false;
+    var currentURL = location.host;
+  </script>
+
+  <!-- ここに設定した「answered.html」にリダイレクト -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location=currentURL + 'answered.html';}"></iframe>
+  <!-- iframe用script ここまで -->
 <body>
 	<nav class="navbar">
 		<div class="container">
@@ -113,13 +122,31 @@
 	<section id="private" class="col-md-12 custom-center">
 		<div><h3 class="white">PRIVATE</h3></div>
 	</section>
-	<section id="contact" class="col-md-12 custom-center ">
-		<div><h3 class="white">contact</h3></div>
-		<h6>googleフォームでご連絡下さい、連絡から1~3日以内に返信致します</h6>
-	</section>
-	<div class = "custom-center"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeA71w7wCMh-f9SIbfC7hRRJw4gnra-l_GnmuleIbHnCNuelg/viewform?embedded=true" width="580" height="1280" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe></div>
+	<section id="contact" class="col-md-12">
+		<div class="custom-center">
+			<h3 class="white">contact</h3><n>
+			<h6>googleフォームでご連絡下さい、連絡から1~3日以内に返信致します</h6>
+		</div>
+		<div class="col-md-3"></div>
+		<div class="col-md-6 col-sm-12">
+			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeA71w7wCMh-f9SIbfC7hRRJw4gnra-l_GnmuleIbHnCNuelg/formResponse?embedded=true" target="hidden_iframe" onsubmit="submitted=true;" method="POST" id="mG61Hd">
+	
+				<div class="form-group">
+					<label>お名前</label>
+					<input name="entry.151455327" type="text" required="required" id="textfield" class="g_form form-control" placeholder="要返信の場合SNSのID又はメールアドレス等">
+				</div>
+	
+				<div class="form-group">	
+					<label>お問い合わせ内容</label>
+					<textarea id="textarea" name="entry.287957598" required="required" class="g_form_text form-control" placeholder="お問い合わせ内容"></textarea>
+				</div>
+				<button type="submit" class="white btn btn-primary ">送信</button>
+			</form>
+		</div>
 
-	<footer class ="white">
+	</section>
+
+	<footer class = "col-md-12">
 		<div class="text-right"><h6>©makeinufilm 2023 　　　　</h6><br></div>
 	</footer>
 	<div class="mobile-nav">
