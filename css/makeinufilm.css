@@ -150,7 +150,11 @@ header .typed-cursor {
 		padding-right: 0px;
 	}
 }
+.custom-margin  {
+	margin-right: 10%;
+	margin-left: 10%;
 
+}
 
 .custom-widgh img {
 	width: 100%;
