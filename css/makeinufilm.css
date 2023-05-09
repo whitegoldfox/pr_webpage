@@ -134,6 +134,29 @@ header .typed-cursor {
 	animation-iteration-count: infinite;
 }
 
+@media(max-width:990px){
+	.custom-widgh {
+
+		margin-top: 100px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+@media(min-width:991px){
+	.custom-widgh {
+
+		margin-top: 60px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+
+.custom-widgh img {
+	width: 100%;
+	height: auto;
+
+}
 .custom-header {
 	height:600px;
 
